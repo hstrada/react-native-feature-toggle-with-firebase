@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "35336667945",
+    "project_id": "remotine-297f6",
+    "storage_bucket": "remotine-297f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35336667945:android:a7e045c055f2bb64e1ad38",
+        "android_client_info": {
+          "package_name": "com.remotine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35336667945-7tgghld8eis002ofb7377brvnd5pqqtg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5OnY8jGTWDfCaANFZWjl8dKkfU50HIQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35336667945-7tgghld8eis002ofb7377brvnd5pqqtg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
