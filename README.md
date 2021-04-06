@@ -43,6 +43,34 @@ apply plugin: 'com.google.gms.google-services' // <- Add this line
 
 ### iOS Setup
 
+```bash
+cd ios && pod install
+```
+
+Download GoogleService-Info.plist from firebase console
+
+Copy them to project
+
+```bash
+cd ios && open Remotine.xcworkspace
+```
+
+Add GoogleService-Info.plist to project and check 'copy items if needed' box
+
+/ios/Remotine/AppDelegate.m
+
+```swift
+#import <Firebase.h>
+```
+
+Inside *didFinishLaunchingWithOptions* method
+
+```swift
+if ([FIRApp defaultApp] == nil) {
+  [FIRApp configure];
+}
+```
+
 ---
 
 ## Remote Config Support
