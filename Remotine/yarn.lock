@@ -1100,11 +1100,6 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
-"@react-native-firebase/iid@^11.1.2":
-  version "11.1.2"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/iid/-/iid-11.1.2.tgz#faeafc05b8e37dd688336d4bbbc577a3bb78d28c"
-  integrity sha512-wmwGv7vHAqYkJRMp7o107703QOxx1crYf8l4Mo5GwLkihtbijsM0TjT3PzgZ9wBWZj9RX4XPezCROjSYX1aTTw==
-
 "@react-native-firebase/remote-config@^11.1.2":
   version "11.1.2"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/remote-config/-/remote-config-11.1.2.tgz#b82f704a8a0f409e5781bb5b1cfb22fb37477eed"

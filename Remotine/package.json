@@ -12,7 +12,6 @@
   "dependencies": {
     "@react-native-firebase/analytics": "^11.1.2",
     "@react-native-firebase/app": "^11.1.2",
-    "@react-native-firebase/iid": "^11.1.2",
     "@react-native-firebase/remote-config": "^11.1.2",
     "react": "17.0.1",
     "react-native": "0.64.0"

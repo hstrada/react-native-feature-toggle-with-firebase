@@ -3,13 +3,6 @@ import {Text, View} from 'react-native';
 
 import remoteConfig from '@react-native-firebase/remote-config';
 
-import iid from '@react-native-firebase/iid';
-
-async function getInstanceId() {
-  const id = await iid().getToken();
-  console.log('Current Instance ID: ', id);
-}
-
 const fetchRemoteConfig = async () => {
   try {
     await remoteConfig().setConfigSettings({
@@ -30,7 +23,6 @@ const fetchRemoteConfig = async () => {
 const App = () => {
   React.useEffect(() => {
     fetchRemoteConfig();
-    getInstanceId();
   }, []);
 
   return (
