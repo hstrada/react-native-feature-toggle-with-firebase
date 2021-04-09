@@ -7,6 +7,20 @@ npx react-native init Remotine --template react-native-template-typescript
 ```
 ---
 
+### Apresentar código
+
+```jsx
+const App = () => {
+  const isFeatureEnabled = true;
+
+  return (
+    <View>
+      {isFeatureEnabled ? <Text>Caminho A</Text> : <Text>Caminho Antigo</Text>}
+    </View>
+  );
+};
+```
+
 ## Firebase Support
 
 ```bash
@@ -78,3 +92,5 @@ if ([FIRApp defaultApp] == nil) {
 ```bash
 yarn add @react-native-firebase/remote-config
 ```
+
+### Amostragem, liberar por condicional
