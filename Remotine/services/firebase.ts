@@ -11,5 +11,6 @@ export const fetchAndActivateRemoteConfig = async () => {
     await remoteConfig().fetchAndActivate();
   } catch (error) {
     // tratamento de erro
+    console.log(error);
   }
 };

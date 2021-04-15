@@ -43,6 +43,8 @@ Firebase console -> download google-services.json and place it at:
 /android/app/google-services.json
 ```
 
+> https://developers.google.com/android/guides/google-services-plugin
+
 /android/build.gradle
 
 ```java
