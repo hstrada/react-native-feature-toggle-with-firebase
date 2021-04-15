@@ -4,9 +4,9 @@ const MINIMUM_FETCH_INTERVAL_MILLIS = 30;
 
 export const setRemoteConfigAndFetchValues = async () => {
   try {
-    // await remoteConfig().setDefaults({
-    //   RemotineHome: false,
-    // });
+    await remoteConfig().setDefaults({
+      RemotineHome: true,
+    });
     await remoteConfig().setConfigSettings({
       minimumFetchIntervalMillis: MINIMUM_FETCH_INTERVAL_MILLIS,
     });

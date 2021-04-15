@@ -10,7 +10,7 @@ const App = () => {
   }, []);
 
   const isHomeFeatureEnabled = getRemoteFeatureValue('RemotineHome');
-
+  console.log(isHomeFeatureEnabled);
   // pontos de atenção
 
   return (

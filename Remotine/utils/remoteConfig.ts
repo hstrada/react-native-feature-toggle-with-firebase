@@ -2,6 +2,15 @@ import remoteConfig from '@react-native-firebase/remote-config';
 
 type TRemoteTypes = 'RemotineHome' | 'RemotineFeature';
 
+const remoteKeys = {
+  RemoteHome: {
+    default: false,
+  },
+  RemotineFeature: {
+    default: true,
+  },
+};
+
 export const getRemoteFeatureValue = (key: TRemoteTypes) =>
   remoteConfig().getValue(key).asBoolean();
 
