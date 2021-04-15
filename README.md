@@ -5,6 +5,7 @@
 ```bash
 npx react-native init Remotine --template react-native-template-typescript
 ```
+
 ---
 
 ### Apresentar código
@@ -25,6 +26,12 @@ const App = () => {
 
 ```bash
 yarn add @react-native-firebase/app
+```
+
+## Remote Config Support
+
+```bash
+yarn add @react-native-firebase/remote-config
 ```
 
 ---
@@ -86,11 +93,5 @@ if ([FIRApp defaultApp] == nil) {
 ```
 
 ---
-
-## Remote Config Support
-
-```bash
-yarn add @react-native-firebase/remote-config
-```
 
 ### Amostragem, liberar por condicional
