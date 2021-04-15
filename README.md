@@ -97,3 +97,15 @@ if ([FIRApp defaultApp] == nil) {
 ---
 
 ### Amostragem, liberar por condicional
+git flow
+
+estrutura default
+
+tratamentos de erro - internet
+
+gerou métricas?
+vai precisar desligar de forma tranquila?
+
+até que ponto vale a pena trazer?
+precisa gerenciar muita coisa dentro do app
+troca de bff, layout
