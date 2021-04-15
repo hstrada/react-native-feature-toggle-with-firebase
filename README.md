@@ -112,3 +112,7 @@ vai precisar desligar de forma tranquila?
 até que ponto vale a pena trazer?
 precisa gerenciar muita coisa dentro do app
 troca de bff, layout
+
+### Referências
+
+https://firebase.google.com/docs/remote-config/loading
