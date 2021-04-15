@@ -11,6 +11,8 @@ const App = () => {
 
   const isHomeFeatureEnabled = getRemoteFeatureValue('RemotineHome');
 
+  // pontos de atenção
+
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       {isHomeFeatureEnabled ? <Text>sim</Text> : <Text>não</Text>}
