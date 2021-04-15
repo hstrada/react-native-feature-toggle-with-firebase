@@ -1,12 +1,12 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-import {fetchAndActivateRemoteConfig} from './services/firebase';
+import {setRemoteConfigAndFetchValues} from './services/firebase';
 import {getRemoteFeatureValue} from './utils/remoteConfig';
 
 const App = () => {
   React.useEffect(() => {
-    fetchAndActivateRemoteConfig();
+    setRemoteConfigAndFetchValues();
   }, []);
 
   const isHomeFeatureEnabled = getRemoteFeatureValue('RemotineHome');

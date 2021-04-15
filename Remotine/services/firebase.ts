@@ -2,7 +2,7 @@ import remoteConfig from '@react-native-firebase/remote-config';
 
 const MINIMUM_FETCH_INTERVAL_MILLIS = 30;
 
-export const fetchAndActivateRemoteConfig = async () => {
+export const setRemoteConfigAndFetchValues = async () => {
   try {
     // await remoteConfig().setDefaults({
     //   RemotineHome: false,

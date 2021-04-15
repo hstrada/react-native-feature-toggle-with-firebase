@@ -97,6 +97,9 @@ if ([FIRApp defaultApp] == nil) {
 ---
 
 ### Amostragem, liberar por condicional
+
+### pontos de atenção
+
 git flow
 
 estrutura default
