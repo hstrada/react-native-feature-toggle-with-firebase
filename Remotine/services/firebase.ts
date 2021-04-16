@@ -1,6 +1,6 @@
 import remoteConfig from '@react-native-firebase/remote-config';
 
-import {remoteKeys} from '../utils/remoteFeature';
+import {remoteKeys} from '../utils/constants';
 
 const MINIMUM_FETCH_INTERVAL_MILLIS = 30;
 

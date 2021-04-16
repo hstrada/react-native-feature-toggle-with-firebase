@@ -10,8 +10,6 @@ const App = () => {
   }, []);
 
   const isHomeFeatureEnabled = getRemoteFeatureValue('RemotineHome');
-  console.log(isHomeFeatureEnabled);
-  // pontos de atenção
 
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
