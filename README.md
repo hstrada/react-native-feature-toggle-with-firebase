@@ -1,6 +1,17 @@
 # react-native-feature-toggle-with-firebase
 
-descrição, tag, título
+<img src="https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg" />
+
+## Expert
+
+| [<img src="https://avatars.githubusercontent.com/u/6079947?s=460&u=d7af98379f7769fc782b4e99d86a205c44e57f79&v=4" width="75px;"/>](https://github.com/hstrada) |
+| :-: |
+|[Helena Strada](https://github.com/hstrada)|
+
+### título: Utilizando feature toggle no React Native com Firebase Remote Config
+### tags: react native, feature toggle, feature flag, firebase
+### descrição: neste desafio iremos utilizar os conceitos de feature toggle aplicados ao desenvolvimento mobile, no universo do react native, utilizando o firebase remote config como ferramenta
+
 
 ## Create Project
 
@@ -10,7 +21,7 @@ npx react-native init Remotine --template react-native-template-typescript
 
 ---
 
-### Apresentar código
+### Exemplo na prática
 
 ```jsx
 const App = () => {
