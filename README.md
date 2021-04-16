@@ -8,12 +8,7 @@
 | :-: |
 |[Helena Strada](https://github.com/hstrada)|
 
-### título: Utilizando feature toggle no React Native com Firebase Remote Config
-### tags: react native, feature toggle, feature flag, firebase
-### descrição: neste desafio iremos utilizar os conceitos de feature toggle aplicados ao desenvolvimento mobile, no universo do react native, utilizando o firebase remote config como ferramenta
-
-
-## Create Project
+## Criar Projeto
 
 ```bash
 npx react-native init Remotine --template react-native-template-typescript
@@ -109,23 +104,86 @@ if ([FIRApp defaultApp] == nil) {
 
 ---
 
-### Amostragem, liberar por condicional
+### Desenvolvimento do código
 
-### pontos de atenção
+> src/services/firebase.ts
+```ts
+import remoteConfig from '@react-native-firebase/remote-config';
 
-git flow
+import {remoteKeys} from '../utils/constants';
 
-estrutura default
+const MINIMUM_FETCH_INTERVAL_MILLIS = 30;
 
-tratamentos de erro - internet
+export const setRemoteConfigAndFetchValues = async () => {
+  try {
+    await remoteConfig().setDefaults(remoteKeys);
+    await remoteConfig().setConfigSettings({
+      minimumFetchIntervalMillis: MINIMUM_FETCH_INTERVAL_MILLIS,
+    });
 
-gerou métricas?
-vai precisar desligar de forma tranquila?
+    await remoteConfig().fetchAndActivate();
+  } catch (error) {
+    console.log(error);
+  }
+};
+```
 
-até que ponto vale a pena trazer?
-precisa gerenciar muita coisa dentro do app
-troca de bff, layout
+> src/utils/remoteConfig.ts
+```ts
+import remoteConfig from '@react-native-firebase/remote-config';
+import {TRemoteTypes} from './constants';
+
+export const getRemoteFeatureValue = (key: TRemoteTypes) =>
+  remoteConfig().getValue(key).asBoolean();
+```
+
+> src/utils/constants.ts
+```ts
+export type TRemoteTypes = 'RemotineHome' | 'RemotineFeature' | 'FeatureHome';
+
+export const remoteKeys: {[key in TRemoteTypes]: boolean} = {
+  RemotineHome: false,
+  RemotineFeature: true,
+  FeatureHome: false,
+};
+```
+
+> App.tsx
+```tsx
+import React from 'react';
+import {Text, View} from 'react-native';
+
+import {setRemoteConfigAndFetchValues} from './services/firebase';
+import {getRemoteFeatureValue} from './utils/remoteConfig';
+
+const App = () => {
+  React.useEffect(() => {
+    setRemoteConfigAndFetchValues();
+  }, []);
+
+  const isHomeFeatureEnabled = getRemoteFeatureValue('RemotineHome');
+
+  return (
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      {isHomeFeatureEnabled ? <Text>sim</Text> : <Text>não</Text>}
+    </View>
+  );
+};
+
+export default App;
+```
+
+---
 
 ### Referências
 
 https://firebase.google.com/docs/remote-config/loading
+
+---
+
+### Informações
+
+
+- [x] título: Utilizando feature toggle no React Native com Firebase Remote Config
+- [x] tags: react native, feature toggle, feature flag, firebase
+- [x] descrição: neste desafio iremos utilizar os conceitos de feature toggle aplicados ao desenvolvimento mobile, no universo do react native, utilizando o firebase remote config como ferramenta

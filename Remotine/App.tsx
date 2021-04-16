@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-import {setRemoteConfigAndFetchValues} from './services/firebase';
-import {getRemoteFeatureValue} from './utils/remoteConfig';
+import {setRemoteConfigAndFetchValues} from './src/services/firebase';
+import {getRemoteFeatureValue} from './src/utils/remoteConfig';
 
 const App = () => {
   React.useEffect(() => {
